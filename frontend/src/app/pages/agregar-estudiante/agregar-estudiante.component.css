@@ -1,0 +1,16 @@
+.pie-form {
+    font-size: 90%;
+    text-align: center;    
+    margin-top: 15px;
+}
+
+.pie-form a {
+    display: block;
+    text-decoration: none;
+    color: #1d9bef;
+    margin-bottom: 3px;
+}
+
+.pie-form a:hover {
+    color: #1e2021;
+}

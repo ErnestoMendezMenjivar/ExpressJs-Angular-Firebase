@@ -1,0 +1,41 @@
+<div class="imagen">
+<br><br><br><br><br>
+
+<div class="contenedor">
+        
+    <section class="main">
+        <article>
+            <h2 class="titulo">Registrarse</h2>
+            <p class="parrafo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.
+            </p>
+            <a href="#" class="enlace"> lee mas sobre nosotros...</a>
+        </article>
+    </section>
+
+    <aside>
+        <div class="encabezado">Inicie session</div>
+        <form  (ngSubmit)= "forSubmit()">
+            <label for="usuario">Email: </label>
+            <input type="email" required name="email" [(ngModel)]= "formLogin.email" id="usuario" placeholder="Ingrese su usuario">
+
+            <label for="contraseña">Contraseña: </label>
+            <input type="password" required name="password" [(ngModel)]= "formLogin.password" id="contraseña" placeholder="ingrese contraseña">
+
+            <button type="submit" class="boton"> Iniciar session</button>
+
+        </form>
+        <div class="pie-form">
+            <a routerLink="../registro">¿No tienes Cuenta? Registrate</a>
+            <button class="btn bnt-info" (click)="googleLogin()">iniciar session con Google</button>
+        </div>
+    </aside>
+
+</div>
+
+<br><br><br><br><br><br><br><br><br><br>
+
+</div>
+

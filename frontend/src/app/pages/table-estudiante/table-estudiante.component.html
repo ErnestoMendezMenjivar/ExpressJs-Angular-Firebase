@@ -1,0 +1,81 @@
+<br><br><br>
+
+<div class="container tex-center">
+  <div class="tex-center">
+    <h1>Gestion Estudiantes</h1>
+  </div>
+  <div style="text-align: right;">
+    <a type="button" mat-raised-button color="primary" routerLink="/agregar">Agregar
+      <mat-icon>person_add</mat-icon></a>
+  </div>
+  <br>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Edad</th>
+        <th scope="col">Telefono</th>
+        <th scope="col">Encargado</th>
+        <th scope="col">Semestre</th>
+        <th scope="col">Año</th>
+        <th scope="col">Estado</th>
+        <th scope="col">Aciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let estudiantes of estudiante">
+
+        <td>{{estudiantes.nombre}}</td>
+        <td>{{estudiantes.apellido}}</td>
+        <td>{{estudiantes.edad}}</td>
+        <td>{{estudiantes.telefono}}</td>
+        <td>{{estudiantes.encargado}}</td>
+        <td>{{estudiantes.semestre}}</td>
+        <td>{{estudiantes.anio}}</td>
+        <td>{{estudiantes.estado}}</td>
+        <td>
+          <a (click)="editarEstudiante(estudiantes.id)" class="btn btn-primary" title="Editar registro"><mat-icon>edit</mat-icon></a>&nbsp;&nbsp;&nbsp;
+          <a (click)="eliminarEstudiante(estudiantes.id)" class="btn btn-danger" title="Eliminar registro"><mat-icon>delete_forever</mat-icon></a>&nbsp;&nbsp;&nbsp;
+          <a (click)="verDetalles(estudiantes.id)" class="btn btn-info" title="detalles de estudiante"><mat-icon>info</mat-icon></a>
+        </td>
+      </tr>
+    </tbody>
+  </table><br><br>
+</div>
+
+<br><br>
+
+
+
+
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  Launch static backdrop modal
+</button> -->
+
+<!-- Modal -->
+<div class="modal fade" id="verDetalles" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre:</strong> {{estudianteSeleccionada.nombre}}</p>
+        <p><strong>Apellido:</strong> {{estudianteSeleccionada.apellido}}</p>
+        <p><strong>Edad:</strong> {{estudianteSeleccionada.edad}}</p>
+        <p><strong>Telefono:</strong> {{estudianteSeleccionada.telefono}}</p>
+        <p><strong>Encargado:</strong> {{estudianteSeleccionada.encargado}}</p>
+        <p><strong>Semestre:</strong> {{estudianteSeleccionada.semestre}}</p>
+        <p><strong>Año:</strong> {{estudianteSeleccionada.anio}}</p>
+        <p><strong>Estado:</strong> {{estudianteSeleccionada.estado}}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>

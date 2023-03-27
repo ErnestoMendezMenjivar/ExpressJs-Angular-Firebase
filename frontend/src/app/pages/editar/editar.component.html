@@ -1,0 +1,93 @@
+<br><br><br>
+<div class="bootstrap-wrapper">
+    <div class="container" >
+        <div class="row" style="margin-top: 18px;" >
+            <div class="col-md-6 offset-md-3" style="border-radius: 15px; background-color: aliceblue;"><br>
+                <div class="container text-center" >
+                </div>
+                <h1 class="text-center">Editar Estudiante </h1>
+                
+                <form #agregarForm="ngForm" (ngSubmit)="onSubmit()" class="formulario">
+                    <div class="row form-group">
+                      <div class="col-lg-6">
+
+                        <mat-form-field class="full-width" appearance="outline">
+                          <mat-label>Nombre:</mat-label>
+                          <input matInput type="text" #nombre="ngModel" name="nombre" id="nombre" [(ngModel)]="estudiante.nombre" minlength="3" maxlength="40" required>
+                          <!-- <div class="alert alert-danger" *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)">
+                          </div> -->
+                        </mat-form-field>
+
+                      </div>
+                      <div class="col-lg-6">
+
+                    <mat-form-field class="full-width " appearance="outline">
+                      <mat-label>Apellido: </mat-label>
+                      <input required matInput type="text" [(ngModel)]="estudiante.apellido" name="apellido" placeholder="Escriba el apellido" required>
+                    </mat-form-field>
+
+                      </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-6">
+
+                          <mat-form-field class="full-width " appearance="outline">
+                            <mat-label>Edad: </mat-label>
+                            <input required matInput type="number" name="edad" [(ngModel)]="estudiante.edad" placeholder="Escriba la edad" required>
+                          </mat-form-field>
+
+                        </div>
+                        <div class="col-lg-6">
+
+                          <mat-form-field class="full-width " appearance="outline">
+                            <mat-label>Telefono: </mat-label>
+                            <input required matInput type="text" name="telefono" [(ngModel)]="estudiante.telefono" placeholder="+503-00-00-00-00" required>
+                          </mat-form-field>
+
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-6">
+
+                          <mat-form-field class="full-width " appearance="outline">
+                            <mat-label>Encargado: </mat-label>
+                            <input required matInput type="text" name="encargado" [(ngModel)]="estudiante.encargado" placeholder="Escriba nombre de encargado" required>
+                          </mat-form-field>
+
+                        </div>
+                        <div class="col-lg-6">
+
+                          <mat-form-field class="full-width " appearance="outline">
+                            <mat-label>Semestre: </mat-label>
+                            <input required matInput type="text" name="semestre" [(ngModel)]="estudiante.semestre" placeholder="Escriba el semestre" required>
+                          </mat-form-field>
+
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-6">
+
+                          <mat-form-field class="full-width " appearance="outline">
+                            <mat-label>Año: </mat-label>
+                            <input required matInput type="text" name="anio" [(ngModel)]="estudiante.anio" placeholder="2023" required>
+                          </mat-form-field>
+
+                        </div>
+                        <div class="col-lg-6">
+
+                          <mat-form-field class="full-width " appearance="outline">
+                            <mat-label>Estado: </mat-label>
+                            <input required matInput type="text" name="estado" [(ngModel)]="estudiante.estado" placeholder="Estado del alumno" required>
+                          </mat-form-field>
+
+                        </div>
+                      </div>
+                      <div class="container text-center">
+                        <button mat-raised-button color="primary" [disabled]= "!agregarForm.form.valid">Editar <mat-icon>edit</mat-icon></button>
+                        </div>
+                  </form><br>
+                <br><br>
+            </div>
+        </div>
+    </div>
+</div>
